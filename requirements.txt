@@ -1,0 +1,19 @@
+# geo-map-generator runs on the Python that ships with QGIS, in a venv created
+# with --system-site-packages (see README, "Windows and QGIS setup").
+#
+# Installed into the venv on top of QGIS (versions the sample maps were built with):
+rasterio==1.5.1
+contextily==1.7.1
+
+# Supplied by the QGIS Python and used as-is. Listed for reference; do not
+# reinstall them into the venv unless you know you need to.
+#   geopandas==1.0.1
+#   shapely==2.0.6
+#   pyproj==3.7.0
+#   pandas==2.3.1
+#   matplotlib==3.10.0
+#   scipy==1.13.0
+#   pillow==11.1.0
+#   openpyxl==3.1.2      (only for .xlsx station sheets)
+#
+# Also required from QGIS: the gdal_contour command-line tool and PROJ data.

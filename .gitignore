@@ -1,0 +1,18 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Rasters are never committed. A DEM tile alone is ~50 MB, and everything is
+# re-fetchable.
+*.tif
+*.tiff
+
+# Sites hold real survey data and client work. Everything under sites/ is
+# ignored except the synthetic example, so a new site cannot be committed by
+# accident. To publish another site you must deliberately edit this file.
+sites/*
+!sites/example_igarra/
+
+# Cached downloads, including for the example.
+sites/*/data/

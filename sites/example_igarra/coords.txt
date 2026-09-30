@@ -1,0 +1,28 @@
+SYNTHETIC EXAMPLE DATA. These three points were made up to demonstrate the
+tool. They are not a real survey and no boreholes exist at these positions.
+Elevations are plausible values near the Copernicus GLO-30 DEM surface, written
+in the same GPS-app export format the parser reads for real sites.
+
+Latitude: 7.27889
+Longitude: 6.08556
+Altitude: 869 ft
+Accuracy: 13 ft
+Example BH-A (synthetic)
+
+http://maps.google.com/?q=7.27889,6.08556
+
+Latitude: 7.27935
+Longitude: 6.08637
+Altitude: 874 ft
+Accuracy: 10 ft
+Example BH-B (synthetic)
+
+http://maps.google.com/?q=7.27935,6.08637
+
+Latitude: 7.27981
+Longitude: 6.08719
+Altitude: 858 ft
+Accuracy: 16 ft
+Example BH-C (synthetic)
+
+http://maps.google.com/?q=7.27981,6.08719
