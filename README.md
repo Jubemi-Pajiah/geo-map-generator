@@ -1,5 +1,9 @@
 # geo-map-generator
 
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)
+![Runs on QGIS Python](https://img.shields.io/badge/runs%20on-QGIS%20Python-589632.svg)
+
 A Python tool that turns a small borehole survey (a GPS export with a few
 stations) into three 300 DPI report figures: a location map, a study area map
 on satellite imagery with contours, and a geologic map with an A to A'
@@ -58,6 +62,27 @@ Things a site does not have to specify, because they are derived:
 
 Any of these can be overridden by setting the field explicitly in `site.py`
 (see `mapkit/config.py` for the full list).
+
+## Repository layout
+
+```
+geo-map-generator/
+  make_maps.py          entry point (--list, --all, --only, site names)
+  mapkit/               the shared code
+    env.py              QGIS, GDAL and PROJ setup (imported first)
+    config.py           SiteConfig and the geology presets
+    stations.py         station file parsing and label placement
+    prepare.py          data shared by all three maps, fetched once
+    osm.py, terrain.py  OpenStreetMap, boundaries, DEM and contours
+    location.py, study_area.py, geologic.py   one module per map
+    cartography.py, layers.py, style.py       map furniture and styling
+  sites/
+    example_igarra/     the synthetic example site
+      site.py           what is true about the site (about 10 lines)
+      coords.txt        the station file (synthetic)
+      output/           the three PNGs
+  docs/                 preview images used in this README
+```
 
 ## Quick start
 
